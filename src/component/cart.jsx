@@ -70,11 +70,15 @@ export default function CartPage({ cart, updateQuantity, removeItem }) {
               </div>
             ))}
 
-            {/* Total Price Summary - Great for recruiter impressions */}
             <div className="mx-4 p-4 border-t border-gray-300 flex justify-between items-center">
               <span className="text-xl font-bold">Total:</span>
               <span className="text-xl font-bold text-violet-700">
                 ${cart.reduce((acc, item) => acc + (item.price * (item.quantity || 1)), 0).toFixed(2)}
+              </span>
+            </div>
+            <div className='flex items-center justify-center cursor-pointer bg-violet-600 text-white font-bold text-lg py-3 rounded-lg w-[200px] mx-auto  '>
+              <span>
+             Place Your Order
               </span>
             </div>
           </div>
