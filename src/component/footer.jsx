@@ -12,7 +12,7 @@ const Footer = () => {
                 <a href="mailto:krishpatel1567@gmail.com" className='text-gray-300 hover:underline'>
                     krishpatel1567@gmail.com
                 </a>
-                <a href="tell:7265809546" className='text-gray-300 hover:underline'>
+                <a href="tel:+917265809546" className='text-gray-300 hover:underline'>
                     7265809546
                 </a>
                 <a href="https://wa.me/7265809546" className='text-gray-300 hover:underline'>

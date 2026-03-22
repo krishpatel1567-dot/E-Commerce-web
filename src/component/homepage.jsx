@@ -3,6 +3,7 @@ import { Disclosure } from '@headlessui/react';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
 import { useNavigate } from 'react-router-dom';
 import Footer from './footer';
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function ECommerceApp({ cart, addToCart }) {
   const [products, setProducts] = useState([]);
