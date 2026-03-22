@@ -23,7 +23,7 @@ function App() {
       toast.success(`${product.title} added to cart!`);
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
-      
+      toast.success(`${product.title} added to cart!`);
     }
   };
 
