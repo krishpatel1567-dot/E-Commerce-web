@@ -34,12 +34,12 @@ function App() {
     setCart(newCart);
   };
 
-  const removeItem = (index) => {
-    if (window.confirm("Remove item from cart?")) {
-      const newCart = cart.filter((_, i) => i !== index);
-      setCart(newCart);
-    }
-  };
+  const [pendingRemove, setPendingRemove] = useState(null);
+
+const removeItem = (index) => {
+  const newCart = cart.filter((_, i) => i !== index);
+  setCart(newCart);
+};
 
   return (
     <BrowserRouter>

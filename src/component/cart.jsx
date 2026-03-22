@@ -1,10 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import Footer from './footer';
+import { useState } from 'react';
 
 // Use props passed from App.jsx to keep everything in sync
 export default function CartPage({ cart, updateQuantity, removeItem }) {
   const navigate = useNavigate();
+  const [confirmIndex, setConfirmIndex] = useState(null);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -60,12 +62,31 @@ export default function CartPage({ cart, updateQuantity, removeItem }) {
                     </span>
                   </div>
 
-                  <button
-                    onClick={() => removeItem(index)}
-                    className="text-white hover:font-semibold bg-red-500 px-3 py-1 rounded cursor-pointer [cite: 20]"
-                  >
-                    Remove
-                  </button>
+
+                  {confirmIndex === index ? (
+                    <div className="flex gap-2 items-center">
+                      <span className="text-xs text-gray-500">Remove?</span>
+                      <button
+                        onClick={() => { removeItem(index); setConfirmIndex(null); }}
+                        className="text-white bg-red-500 px-2 py-1 rounded text-xs cursor-pointer"
+                      >
+                        Yes
+                      </button>
+                      <button
+                        onClick={() => setConfirmIndex(null)}
+                        className="text-gray-600 bg-gray-200 px-2 py-1 rounded text-xs cursor-pointer"
+                      >
+                        No
+                      </button>
+                    </div>
+                  ) : (
+                    <button
+                      onClick={() => setConfirmIndex(index)}
+                      className="text-white hover:font-semibold bg-red-500 px-3 py-1 rounded cursor-pointer"
+                    >
+                      Remove
+                    </button>
+                  )}
                 </div>
               </div>
             ))}
@@ -78,7 +99,7 @@ export default function CartPage({ cart, updateQuantity, removeItem }) {
             </div>
             <div className='flex items-center justify-center cursor-pointer bg-violet-600 text-white font-bold text-lg py-3 rounded-lg w-[200px] mx-auto  '>
               <span>
-             Place Your Order
+                Place Your Order
               </span>
             </div>
           </div>
