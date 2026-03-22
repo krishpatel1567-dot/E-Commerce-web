@@ -36,7 +36,7 @@ export default function CartPage({ cart, updateQuantity, removeItem }) {
           <div className="space-y-4 pb-10">
             {cart.map((item, index) => (
               <div key={index} className="flex justify-between items-center pb-4 bg-white rounded-xl p-4 mx-4 shadow-md border border-gray-100">
-                <div className="flex items-center">
+                <div className="flex items-center cursor-pointer">
                   <img src={item.image} className="w-16 h-16 object-contain mr-4" alt={item.title} />
                   <div>
                     <h2 className="font-medium text-sm line-clamp-1 w-48 text-wrap w-[150px] md:w-auto" >{item.title}</h2>
