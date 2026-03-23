@@ -20,7 +20,7 @@ const Footer = () => {
                 </a>
             </div>
             <button>
-                <a className='text-white  rounded-full flex justify-center cursor-pointer  items-center ring ring-1 bg-purple-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300' href="https://github.com/krishpatel1567-dot/PassMan/tree/main">
+                <a className='text-white  rounded-full flex justify-center cursor-pointer  items-center ring ring-1 bg-purple-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300' href="https://github.com/krishpatel1567-dot/E-Commerce-web">
                     <img className='invert p-1 w-10' src="/github.svg" alt="" />
                     <span className="font-bold px-1 text-gray-200">GitHub</span>
                 </a>
